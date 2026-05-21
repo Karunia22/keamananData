@@ -1,0 +1,187 @@
+/* Container */
+.pivot-container {
+    padding: 20px 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* transform: scale(0.9); */
+    transform-origin: top left;
+    /* width: 111%; */
+}
+
+/* Header */
+.pivot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.pivot-header h2 {
+    color: #004080;
+    margin: 0;
+}
+
+.pivot-date {
+    color: gray;
+    font-size: 14px;
+}
+
+/* Card */
+.pivot-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+.pivot-card-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.pivot-card-header .badge {
+    background: #004080;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+.actions button {
+    padding: 6px 12px;
+    margin-left: 8px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.actions button:hover {
+    background: #f0f0f0;
+}
+
+/* Table Wrapper - PERBAIKAN UTAMA */
+.table-wrapper {
+    overflow-x: auto;   /* cuma scroll horizontal */
+    overflow-y: visible;
+    max-height: none;
+}
+
+.pivot-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    text-align: center;
+    font-size: 14px;
+    table-layout: fixed;
+}
+
+.pivot-table thead {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.pivot-table tfoot {
+    position: sticky;
+    bottom: 0;
+    z-index: 10;
+}
+
+.pivot-table th,
+.pivot-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Main Header */
+.main-header {
+    background: linear-gradient(145deg, #004080, #002856);
+    color: white;
+}
+
+.sub-header {
+    background: #f4f4f4;
+}
+
+/* Column colors */
+.tsel {
+    background: #8B1E1E !important;
+}
+
+.datin {
+    background: #1E8F8F !important;
+}
+
+.indibiz {
+    background: #2D6A2D !important;
+}
+
+.wms {
+    background: #1E4F3A !important;
+}
+
+.sqm {
+    background: #003366 !important;
+}
+
+.unspec {
+    background: #2C4F8C !important;
+}
+
+/* Cells */
+.tsel-cell {
+    background: #FFE5E5;
+    font-weight: bold;
+}
+
+.area {
+    font-weight: bold;
+    background: #f7f7f7;
+}
+
+/* Hover effect */
+.pivot-table tbody tr:hover {
+    background: rgba(0,64,128,0.05);
+    transition: 0.2s;
+}
+
+/* Grand Total Row */
+.grand-total {
+    background: #1f3c88;
+    color: white;
+    font-weight: bold;
+}
+
+.grand-total td {
+    color: white;
+}
+
+/* MODE TV */
+@media screen and (min-width: 1920px) {
+
+    .pivot-container {
+        padding: 10px 20px;
+    }
+
+    .pivot-table {
+        font-size: 18px;   /* font besar dan jelas */
+    }
+
+    .pivot-table th,
+    .pivot-table td {
+        padding: 6px 4px;  /* padding diperkecil supaya kolom tidak melebar */
+        white-space: nowrap; /* supaya tidak turun baris */
+    }
+
+    .pivot-table {
+        table-layout: fixed; /* kolom rata dan tidak melebar */
+    }
+
+    .pivot-table th,
+    .pivot-table td {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

@@ -1,0 +1,21 @@
+div .list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+div ul .menu {
+    font-weight: bold;
+    font-size: 15px;
+    margin: 10px;
+    height: 30px;
+    width: 150px;
+    background-color: rgb(228, 35, 19);
+    line-height: 30px;
+    text-align: center;
+    color: white;
+    border-radius: 7px;
+}
+
+div ul .menu:hover{
+    background-color: rgb(151, 2, 12);
+}

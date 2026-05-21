@@ -1,0 +1,41 @@
+.monitorDua {
+    text-align: center;
+    width: 100%;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    margin: 50px auto;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* background-color: aqua; */
+}
+
+.item2 {
+    max-height: 350px;
+    width: 550px;
+    min-width: 100px;
+    background-color: white;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0.5px 0.5px 20px rgb(112, 111, 111);
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+}
+.bingkai{
+    max-height: 280;
+    min-width: 280;
+}
+.item2 ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.item2 ul li p {
+    font-size: 20px;
+    font-weight: bold;
+}

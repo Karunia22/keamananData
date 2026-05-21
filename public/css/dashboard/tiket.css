@@ -1,0 +1,133 @@
+.pivot {
+    width: 100%;
+    margin: 20px 0; /* Kurangi margin agar tidak terlalu jauh dari nav */
+    /* Hapus height: 90vh di sini, kita pindahkan ke container */
+    display: table; /* Kembalikan ke fungsi tabel asli */
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 11px; /* Sesuaikan font agar muat banyak data */
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    table-layout: auto; /* BIARKAN kolom melebar sesuai isi data */
+}
+
+/* ============================================
+   HEADER - Tetap Diam (Sticky) SAJA
+   ============================================ */
+.pivot thead {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #b81414;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pivot thead th {
+    padding: 10px 5px;
+    font-weight: 600;
+    border-bottom: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    word-wrap: break-word;
+    font-size: 12px;
+}
+
+/* ============================================
+   FOOTER - TIDAK Sticky (Normal)
+   ============================================ */
+.pivot tfoot {
+    position: static;  /* PENTING: Tidak sticky */
+    z-index: 0;        /* Reset z-index */
+}
+
+.pivot tfoot td {
+    padding: 10px 5px;
+    font-weight: 600;
+    border-top: 2px solid #1f3c88;
+    border-bottom: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    background: #1f3c88;
+    color: white;
+    text-align: center;
+}
+
+/* ============================================
+   BODY
+   ============================================ */
+.pivot tbody td {
+    padding: 8px 4px;
+    border-bottom: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    white-space: normal;
+    word-break: break-all;
+    vertical-align: top;
+    font-size: 11px;
+}
+
+/* ============================================
+   ZEBRA STRIPE & HOVER
+   ============================================ */
+.pivot tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.pivot tbody tr:hover {
+    background-color: #eef3ff;
+    transition: 0.2s;
+}
+
+/* ============================================
+   KOLOM PERTAMA
+   ============================================ */
+.pivot tbody td:first-child {
+    font-weight: 600;
+    background-color: #f4f6fa;
+}
+
+/* ============================================
+   TOTAL ROW (jika ada di tbody)
+   ============================================ */
+.pivot tbody tr.total-row {
+    background: #1f3c88;
+    color: white;
+    font-weight: bold;
+}
+
+.pivot tbody tr.total-row td {
+    border-top: 2px solid #1f3c88;
+    color: white;
+}
+
+/* ============================================
+   LEBAR KOLOM SPESIFIK
+   ============================================ */
+.pivot th:nth-child(1),
+.pivot td:nth-child(1) {
+    width: 40px;
+}
+
+/* ============================================
+   RESPONSIVE (Opsional untuk mobile)
+   ============================================ */
+@media (max-width: 768px) {
+    .pivot {
+        height: 70vh;
+        font-size: 14px;
+    }
+
+    .pivot thead th {
+        font-size: 10px;
+        padding: 8px 3px;
+    }
+
+    .pivot tbody td {
+        font-size: 10px;
+        padding: 6px 3px;
+    }
+
+    .pivot tfoot td {
+        font-size: 10px;
+        padding: 8px 3px;
+    }
+}

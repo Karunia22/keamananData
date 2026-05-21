@@ -1,0 +1,85 @@
+nav {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 9px;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    box-shadow: 0px 2px 5px rgb(112, 111, 111);
+    z-index: 1000;
+}
+
+nav .kanan {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+
+nav .kanan img {
+    height: 40px;
+    width: 120px;
+    margin-right: 20px;
+}
+
+nav .kanan .menu {
+    font-size: 12px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav .kanan .menu li {
+    font-size: 12px;
+    list-style: none;
+    transition: all 0.2s ease;
+    padding-bottom: 3px;
+}
+
+nav .kanan .menu li a {
+    text-decoration: none;
+    color: rgb(29,29,27);
+}
+
+/* Hover */
+nav .kanan .menu li:hover {
+    border-bottom: 1.5px solid rgb(29,29,27);
+}
+
+/* ACTIVE MENU */
+nav .kanan .menu li.active {
+    border-bottom: 2px solid black;
+    font-weight: bold;
+}
+
+nav .profil {
+    width: 350px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav .profil ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav .profil ul a {
+    text-decoration:none;
+    height: 40px;
+    width: 80px;
+    color: white;
+    background-color:  #b81414;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+nav .profil ul a:hover{
+    background-color:  #9a1a1a;
+}
