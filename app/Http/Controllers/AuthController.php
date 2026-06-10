@@ -2,23 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
     public function login()
     {
-        $title = "Login";
+        $title = 'Login';
+
         return view('loginDanRegister.login', compact('title'));
     }
 
     public function cekData(Request $request)
     {
         $data = $request->validate([
-            'name' => 'required|exists:users,name',
+            'name' => 'required',
             'password' => 'required',
         ], [
             'name.required' => 'Username wajib diisi',
